@@ -1,9 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const config = require("./config.json");
 
-let prefix = config.prefix;
- 
 client.on("ready", () => {
     console.log(`Iniciando bot raid...`);
     console.log(`Cliente ${client.user.tag} listo`);
@@ -21,19 +18,6 @@ activity: {
 }
   });
 }
-
-client.on('message', message => {
-    if (message.author.id !== '724423864611766294') 
-    if (message.author.id !== '771106611712098314') 
-  return;
-    if (message.content.startsWith(prefix + 'say')) {
-        if (message.author.bot) return;
-        message.delete()
-        const SayMessage = message.content.slice(6).trim();
-        message.channel.send(SayMessage)
-    }
-});
-
 //nuke
 
 client.on("message", message => {
