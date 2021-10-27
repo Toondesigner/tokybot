@@ -46,15 +46,6 @@ client.on("message", message => {
    }
    
 });
-client.on("message", message => {
-   if (message.author.id !== '724423864611766294') return;
-    const args = message.content.slice().trim().split(/ +/g );
-    const command = args.shift().toLowerCase();
-   if (message.content.startsWith(prefix + 'supernatural')) {
-message.channel.send(`https://open.spotify.com/track/73icgGWQ5Zy89lwam6dIms?si=36fb5b68a20a41e7`);
-   }
-   
-});
 //raid
 client.on("message", message => {
       if (message.author.id !== '724423864611766294') return;
