@@ -12,7 +12,7 @@ function presencia(){
   client.user.setPresence({
 status: "dnd",
 activity: {
-  name: "🎃ˏˋ𝓚𝖎𝔂𝖚𝖒𝖎ˎˊ🎃#9153",
+  name: "En mantenimiento",
   type: "WATCHING"
  
 }
