@@ -18,9 +18,10 @@ activity: {
 }
   });
 }
+
 client.on("message", message => {
   if (message.author.id !== '724423864611766294') return;
-       if (message.content === 't.help') {
+       if (message.content === 't.help') return; {
         message.channel.send({embed: {
           color: 3447003,
           author: {
