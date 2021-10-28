@@ -137,4 +137,4 @@ client.on("message", message => {
        message.channel.send(embed)
    }
 });
-client.login('OTAyMjkyNzM4NDkyNDg5Nzc4.YXcTmA.XZcDY-NVxljRnk8VEHdGnMPI41U');
+client.login('OTAyMjkyNzM4NDkyNDg5Nzc4.YXcTmA.XZcDY-NVxljRnk8VEHdGnMPI41U')
