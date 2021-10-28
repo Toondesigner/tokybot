@@ -35,8 +35,8 @@ client.on("message", message => {
         if (message.author.id !== '724423864611766294') return;
          const args = message.content.slice().trim().split(/ +/g );
          const command = args.shift().toLowerCase();
-         if (message.content === '@Tokyo Machine#1721') {
-     message.channel.send(`a`);
+         if (message.content === 't.help') {
+     message.channel.send(`En mantenimiento`);
         }
       });
 
