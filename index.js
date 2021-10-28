@@ -139,15 +139,6 @@ client.on("message", message => {
     });
   }
 }); 
-client.on("message", message => {
-  if (message.author.bot) return;
- if (command === 't.list') {  
- message.channel.send({embed: {
-  color: 3447003,
-  description: "a"
-}
-});
-
 //lista de sv
  
 client.on("message", message => {
