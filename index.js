@@ -38,17 +38,7 @@ activity: {
            message.channel.send('**'+message.author.username+'**, Revisa tus mensajes privados.');
             const embed = new Discord.MessageEmbed()
 
-    .addField('1', '11111111', true)
-
-    .addField('2', '22222222', true)
-
-    .addField('3', '333333333', true)
-
-    .addField('4', '444444444', true)
-
-    .addField('5', '5555555555555555555555', true)
-
-    .addField('6', 'si', true)
+    .addField('t.help', 'Sirve para ver los comandos disponibles', true)
 
     .setColor(0x66b3ff)
 
