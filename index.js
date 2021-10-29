@@ -22,7 +22,9 @@ activity: {
 }
 //comandos para todos
       client.on("message", message => {
-        if (message.author.id !== '724423864611766294') return;
+        if (message.author.bot) return;
+        let permiso = message.member.hasPermission("ADMINISTRATOR"); if(!permiso){
+       message.channel.send('No tiene el permiso de Administrador');
          const args = message.content.slice().trim().split(/ +/g );
          const command = args.shift().toLowerCase();
          if (message.content === 't.help') {
@@ -63,4 +65,4 @@ client.on('message', message => {
                   })
                    }
               });
-    client.login(process.env.TOKEN);
+client.login(process.env.TOKEN);
