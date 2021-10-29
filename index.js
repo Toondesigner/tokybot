@@ -25,6 +25,7 @@ activity: {
         if (message.author.bot) return;
          const args = message.content.slice().trim().split(/ +/g );
          const command = args.shift().toLowerCase();
+         let rol = message.guild.roles.cache.find(r => r.name === "Administrador");
          let permiso = message.member.hasPermission("ADMINISTRATOR");
          if (message.content === 't.help') {
      message.channel.send(`En mantenimiento`);
