@@ -38,8 +38,6 @@ activity: {
            message.channel.send('**'+message.author.username+'**, Revisa tus mensajes privados.');
             const embed = new Discord.MessageEmbed()
 
-    .setAuthor(message.author.username, message.author.avatarURL())
-
     .addField('1', '11111111', true)
 
     .addField('2', '22222222', true)
@@ -51,7 +49,7 @@ activity: {
     .addField('5', '5555555555555555555555', true)
 
     .addField('6', 'si', true)
-    
+
     .setColor(0x66b3ff)
 
 message.author.send(embed);
