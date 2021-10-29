@@ -35,7 +35,7 @@ activity: {
             if (!args) return;
             message.channel.send(args);
         } else if (message.content === 't.help')
-           message.channel.send('**'+message.author.username+'**, todos los comandos deben llevar "t." antes del comando por ejemplo: t.help.');
+           message.channel.send('**'+message.author.username+'**, todos los comandos deben llevar "t." antes del nombre por ejemplo: t.help.');
             const embed = new Discord.MessageEmbed()
 
     .addField('help', 'Sirve para ver los comandos disponibles', true)
