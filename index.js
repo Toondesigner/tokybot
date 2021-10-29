@@ -54,7 +54,7 @@ client.on("message", message => {
         } else if (message.content.startsWith(prefix+ 'say')) {
             if (!args) return;
             message.channel.send(args);
-        }
-    });
-
+        } else if (message.content === 't.help')
+           message.channel.send(`En mantenimiento`); 
+          });
     client.login(process.env.TOKEN);
