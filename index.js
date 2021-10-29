@@ -35,35 +35,28 @@ activity: {
             if (!args) return;
             message.channel.send(args);
         } else if (message.content === 't.help')
-           
-message.channel.send('**'+message.author.username+'**, Revisa tus mensajes privados.');
-2
-​
-3
-const embed = new Discord.MessageEmbed()
-4
+           message.channel.send('**'+message.author.username+'**, Revisa tus mensajes privados.');
+            const embed = new Discord.MessageEmbed()
+
     .setAuthor(message.author.username, message.author.avatarURL())
-5
+
     .addField('1', '11111111', true)
-6
+
     .addField('2', '22222222', true)
-7
+
     .addField('3', '333333333', true)
-8
+
     .addField('4', '444444444', true)
-9
+
     .addField('5', '5555555555555555555555', true)
-10
+
     .addField('6', 'si', true)
-11
+
     .setFooter("Version 1.0", client.user.cache.avatarURL())
-12
-    .setColor(0x66b3ff)
-13
     
-14
+    .setColor(0x66b3ff)
+
 message.author.send(embed);
-15
           });
 
 //comandos solo para mi
