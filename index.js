@@ -51,8 +51,6 @@ activity: {
     .addField('5', '5555555555555555555555', true)
 
     .addField('6', 'si', true)
-
-    .setFooter("Version 1.0", client.user.cache.avatarURL())
     
     .setColor(0x66b3ff)
 
