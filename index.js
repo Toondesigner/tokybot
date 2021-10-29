@@ -15,7 +15,7 @@ function presencia(){
 status: "dnd",
 activity: {
   name: "t.help para ver los comandos compatibles hasta el momento",
-  type: "WATCHING"
+  type: "COMPETING"
  
 }
   });
