@@ -14,7 +14,7 @@ function presencia(){
   client.user.setPresence({
 status: "dnd",
 activity: {
-  name: "En mantenimiento",
+  name: "t.help para ver los comandos compatibles hasta el momento",
   type: "WATCHING"
  
 }
