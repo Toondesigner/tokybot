@@ -1,6 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
+let prefix = process.env.PREFIX;
+
 client.on("ready", () => {
     console.log(`Iniciando bot raid...`);
     console.log(`Cliente ${client.user.tag} listo`);
@@ -39,5 +41,20 @@ client.on("message", message => {
      message.channel.send(`En mantenimiento`);
         }
       });
+      client.on('message', message => {
+        if (!message.content.startsWith(prefix) || !message.guild) return;
+        if (message.author.bot) return;
+        
+        const cont = message.content.split(' ').slice(1);
+        const args = cont.join(' ');
+    
+        if (message.content.startsWith(prefix+'ping')){
+            message.channel.send('pong');
+    
+        } else if (message.content.startsWith(prefix+ 'say')) {
+            if (!args) return;
+            message.channel.send(args);
+        }
+    });
 
-client.login('OTAyMjkyNzM4NDkyNDg5Nzc4.YXcTmA.XZcDY-NVxljRnk8VEHdGnMPI41U');
+    client.login(process.env.TOKEN);
