@@ -15,8 +15,8 @@ function presencia(){
 status: "dnd",
 activity: {
   name: "t.help para ver los comandos compatibles hasta el momento",
-  url: "https://www.twitch.tv/toonzlgamer",
-  type: "STREAMING"
+  url: "",
+  type: "LISTENING"
  
 }
   });
@@ -45,7 +45,7 @@ activity: {
     message.channel.send(embed);
 });
 
-//comandos solo para mi
+//comandos solo por id
 client.on('message', message => {
             if (!message.content.startsWith(prefix) || !message.guild) return;
             if (message.author.id !== '724423864611766294') return;
