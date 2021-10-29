@@ -15,7 +15,8 @@ function presencia(){
 status: "dnd",
 activity: {
   name: "t.help para ver los comandos compatibles hasta el momento",
-  type: "COMPETING"
+  url: "https://www.twitch.tv/toonzlgamer",
+  type: "STREAMING"
  
 }
   });
