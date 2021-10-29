@@ -48,8 +48,8 @@ client.on("message", message => {
         const cont = message.content.split(' ').slice(1);
         const args = cont.join(' ');
     
-        if (message.content.startsWith(prefix+'ping')){
-            message.channel.send('pong');
+        if (message.content.startsWith(prefix+'invite')){
+            message.channel.send('https://discord.com/api/oauth2/authorize?client_id=902292738492489778&permissions=8&scope=bot');
     
         } else if (message.content.startsWith(prefix+ 'say')) {
             if (!args) return;
