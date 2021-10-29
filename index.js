@@ -40,10 +40,9 @@ activity: {
 
     .addField('t.help', 'Sirve para ver los comandos disponibles', true)
 
-    .setColor(0x66b3ff)
-
-message.author.send(embed);
-          });
+    .setColor(0x66b3ff);
+    message.channel.send(embed);
+});
 
 //comandos solo para mi
 client.on('message', message => {
