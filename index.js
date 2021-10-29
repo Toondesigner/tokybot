@@ -23,14 +23,13 @@ activity: {
 //comandos para todos
       client.on("message", message => {
         if (message.author.bot) return;
-        let permiso = message.member.hasPermission("ADMINISTRATOR"); if(!permiso){
-       message.channel.send('No tiene el permiso de Administrador');
          const args = message.content.slice().trim().split(/ +/g );
          const command = args.shift().toLowerCase();
+         let permiso = message.member.hasPermission("ADMINISTRATOR");
          if (message.content === 't.help') {
      message.channel.send(`En mantenimiento`);
-        }
-      });
+         }
+        });
       client.on('message', message => {
         if (!message.content.startsWith(prefix) || !message.guild) return;
         if (message.author.bot) return;
