@@ -35,10 +35,10 @@ activity: {
             if (!args) return;
             message.channel.send(args);
         } else if (message.content === 't.help')
-           message.channel.send('**'+message.author.username+'**, Revisa tus mensajes privados.');
+           message.channel.send('**'+message.author.username+'**, todos los comandos deben llevar "t." antes del comando por ejemplo: t.help.');
             const embed = new Discord.MessageEmbed()
 
-    .addField('t.help', 'Sirve para ver los comandos disponibles', true)
+    .addField('help', 'Sirve para ver los comandos disponibles', true)
 
     .setColor(0x66b3ff);
     message.channel.send(embed);
