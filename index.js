@@ -43,7 +43,7 @@ activity: {
     .setColor(0x66b3ff);
     message.channel.send(embed);
         } else if (message.content.startsWith(prefix+ 'clear'))
-        let cantidad = parseInt(args[0]);
+        cantidad = parseInt(args[0]);
 message.channel.bulkDelete(cantidad);
 });
 
