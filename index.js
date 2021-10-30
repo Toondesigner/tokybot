@@ -64,7 +64,7 @@ activity: {
         
             message.channel.send(embed);
         }
-      } else if (message.content.startsWith(prefix+'avatar')) {
+      } else if (message.content.startsWith(prefix+'server')) {
       var server = message.guild;
   
 const embed = new Discord.MessageEmbed()
