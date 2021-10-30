@@ -44,7 +44,7 @@ activity: {
     message.channel.send(embed);
         } else if (message.content.startsWith(prefix+ 'ban'))
         let mencionado = message.mentions.users.first();
-let razon = args.slice(1).join(' ');
+       let razon = args.slice(1).join(' ');
 
 if(!mencionado) return message.reply('No ha mencionando a ningún miembro.');
 if(!razon) return message.channel.send('Escriba una razón del uso de ban.');
