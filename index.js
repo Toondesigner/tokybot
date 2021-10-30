@@ -14,7 +14,7 @@ function presencia(){
   client.user.setPresence({
 status: "dnd",
 activity: {
-  name: "t.help |Toondesigner mi creador",
+  name: "t.help",
   type: "WATCHING"
  
 }
