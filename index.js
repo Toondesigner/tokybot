@@ -76,6 +76,7 @@ activity: {
     .addField('Creado el', server.joinedAt.toDateString(), true)
     .addField('Dueño del Servidor', server.owner.user.tag +'('+server.owner.user.id +')', true)
     .addField('Miembros', server.memberCount, true)
+    .addField('Bots', server.botCount, true)
     .addField('Roles', server.roles.size, true)
     .setColor(0x66b3ff)
     
