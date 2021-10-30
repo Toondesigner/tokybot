@@ -82,7 +82,7 @@ activity: {
 message.channel.send(embed);
       }
 });
-//comandos adminsa
+//comandos admins
 //comandos solo por id
 client.on('message', message => {
             if (!message.content.startsWith(prefix) || !message.guild) return;
