@@ -44,6 +44,7 @@ activity: {
     .addField('say', 'Sirve para que yo diga lo que tu quieras', true)
     .addField('invite', 'Comando inutil si no eres 인도 마호가니#5335', true)
     .addField('avatar', 'Es para ver la foto de perfil de alguien', true)
+    .addField('server', 'Es para ver info sobre el server', true)
 
     .setColor(0x66b3ff);
     message.channel.send(embed);
@@ -69,8 +70,7 @@ activity: {
   
 const embed = new Discord.MessageEmbed()
     .setThumbnail(server.iconURL())
-    .setAuthor(server.name, server.iconURL())
-    .addField('ID', server.id, true)
+    .setAuthor(server.name, server.iconURL()) .addField('ID', server.id, true)
     .addField('Region', server.region, true)
     .addField('Creado el', server.joinedAt.toDateString(), true)
     .addField('Dueño del Servidor', server.owner.user.tag +'('+server.owner.user.id +')', true)
