@@ -70,7 +70,7 @@ activity: {
   
 const embed = new Discord.MessageEmbed()
     .setThumbnail(server.iconURL())
-    .setAuthor(server.name, server.iconURL()) 
+    .setAuthor(server.name()) 
     .addField('ID', server.id, true)
     .addField('Region', server.region, true)
     .addField('Creado el', server.joinedAt.toDateString(), true)
