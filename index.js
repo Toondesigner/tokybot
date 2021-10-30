@@ -4,9 +4,9 @@ const client = new Discord.Client();
 let prefix = process.env.PREFIX;
 
 client.on("ready", () => {
-    console.log(`Iniciando bot raid...`);
-    console.log(`Cliente ${client.user.tag} listo`);
-    console.log("Pikachu");
+    console.log(`Iniciando...`);
+    console.log(`listo`);
+    console.log(`todo en orden`);
     presencia();  
     });
 
@@ -34,7 +34,7 @@ activity: {
         } else if (message.content.startsWith(prefix+ 'say')) {
             if (!args) return;
             message.channel.send(args);
-            
+
         } else if (message.content.startsWith(prefix+'help')) {
            message.channel.send('**'+message.author.username+'**, todos los comandos deben llevar "t." antes del nombre por ejemplo: t.help.');
             const embed = new Discord.MessageEmbed()
@@ -47,7 +47,7 @@ activity: {
     message.channel.send(embed);
         } 
 });
-
+//comandos admins
 //comandos solo por id
 client.on('message', message => {
             if (!message.content.startsWith(prefix) || !message.guild) return;
