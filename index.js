@@ -34,7 +34,7 @@ activity: {
         } else if (message.content.startsWith(prefix+ 'say')) {
             if (!args) return;
             message.channel.send(args);
-        } else if (message.content === 't.help')
+        } else if (message.content.startsWith(prefix+'help')) {
            message.channel.send('**'+message.author.username+'**, todos los comandos deben llevar "t." antes del nombre por ejemplo: t.help.');
             const embed = new Discord.MessageEmbed()
 
@@ -42,6 +42,7 @@ activity: {
 
     .setColor(0x66b3ff);
     message.channel.send(embed);
+        }
 });
 
 //comandos solo por id
