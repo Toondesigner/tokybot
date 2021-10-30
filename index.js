@@ -68,7 +68,7 @@ activity: {
       } else if (message.content.startsWith(prefix+'server')) {
       var server = message.guild;
   
-const embed = new Discord.MessageEmbed()
+     const embed = new Discord.MessageEmbed()
     .setThumbnail(server.iconURL())
     .setAuthor(server.name, server.iconURL()) 
     .addField('ID', server.id, true)
