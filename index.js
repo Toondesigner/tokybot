@@ -14,7 +14,7 @@ function presencia(){
   client.user.setPresence({
 status: "dnd",
 activity: {
-  name: "t.help para ver los comandos compatibles hasta el momento",
+  name: "t.help",
   type: "WATCHING"
  
 }
@@ -39,6 +39,8 @@ activity: {
             const embed = new Discord.MessageEmbed()
 
     .addField('help', 'Sirve para ver los comandos disponibles', true)
+    .addField('say', 'Sirve para que yo diga lo que tu quieras', true)
+    .addField('invite', 'Ni lo intentes', true)
 
     .setColor(0x66b3ff);
     message.channel.send(embed);
