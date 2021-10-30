@@ -41,7 +41,8 @@ activity: {
 
     .addField('help', 'Sirve para ver los comandos disponibles', true)
     .addField('say', 'Sirve para que yo diga lo que tu quieras', true)
-    .addField('invite', 'Ni lo intentes', true)
+    .addField('invite', 'Comando inutil si no eres 인도 마호가니#5335', true)
+    .addField('avatar', 'Es para ver la foto de perfil de alguien', true)
 
     .setColor(0x66b3ff);
     message.channel.send(embed);
