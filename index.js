@@ -33,6 +33,7 @@ activity: {
     
         } else if (message.content.startsWith(prefix+ 'say')) {
             if (!args) return;
+            message.delete()
             message.channel.send(args);
 
         } else if (message.content.startsWith(prefix+'help')) {
