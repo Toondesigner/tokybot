@@ -42,15 +42,9 @@ activity: {
 
     .setColor(0x66b3ff);
     message.channel.send(embed);
-        } else if (message.content.startsWith(prefix+ 'ban'))
-        let mencionado = message.mentions.users.first();
-       let razon = args.slice(1).join(' ');
-
-if(!mencionado) return message.reply('No ha mencionando a ningún miembro.');
-if(!razon) return message.channel.send('Escriba una razón del uso de ban.');
-
-message.guild.members.ban(mencionado, {reason: razon});
-message.channel.send(`**${mencionado.username}**, fue baneado del servidor, razón: ${razon}.`);
+        } else if (message.content.startsWith(prefix+ 'clear'))
+        let cantidad = parseInt(args[0]);
+message.channel.bulkDelete(cantidad);
 });
 
 //comandos solo por id
