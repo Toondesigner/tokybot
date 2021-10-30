@@ -56,14 +56,6 @@ activity: {
                 .setColor(0x66b3ff)
                 .setFooter(`Avatar de ${message.author.tag}`);
             message.channel.send(embed);
-        
-        } else {
-            const embed = new Discord.MessageEmbed()
-                .setImage(`${miembro.displayAvatarURL()}`)
-                .setColor(0x66b3ff)
-                .setFooter(`Avatar de ${miembro.tag}`);
-        
-            message.channel.send(embed);
         }
       } else if (message.content.startsWith(prefix+'server')) {
       var server = message.guild;
