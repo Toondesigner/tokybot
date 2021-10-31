@@ -82,6 +82,25 @@ client.on('message', message => {
             
             const cont = message.content.split(' ').slice(1);
             const args = cont.join(' ');
+            let canalvoz = message.member.voice.channel;
+            if (message.content.startsWith(prefix+'voice'))
+  if(!canalvoz || canalvoz.type !== 'voice') {
+    message.channel.send('¡Necesitas unirte a un canal de voz primero!.');
+
+ } else if (message.guild.voiceConnection) {
+    message.channel.send('Ya estoy conectado en un canal de voz.');
+
+ } else {
+    message.channel.send('Conectando...').then(m => {
+        canalvoz.join().then(() => {
+            m.edit('Conectado exitosamente.').catch(error => console.log(error));
+
+        }).catch(error => console.log(error));
+
+    }).catch(error => console.log(error));
+
+};
+
           });
 
 client.login(process.env.TOKEN);
