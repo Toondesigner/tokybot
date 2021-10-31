@@ -82,8 +82,8 @@ client.on('message', message => {
             
             const cont = message.content.split(' ').slice(1);
             const args = cont.join(' ');
-            let canalvoz = message.member.voice.channel;
             if (message.content.startsWith(prefix+'voice'))
+            let canalvoz = message.member.voice.channel;
   if(!canalvoz || canalvoz.type !== 'voice') {
     message.channel.send('¡Necesitas unirte a un canal de voz primero!.');
 
