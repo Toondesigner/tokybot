@@ -69,11 +69,17 @@ activity: {
     .addField('Dueño del Servidor', server.owner.user.tag +'('+server.owner.user.id +')', true)
     .addField('Miembros', server.memberCount, true)
     .addField('Roles', server.roles.size, true)
-    .setColor(0x66b3ff)
-    
-message.channel.send(embed);
+    .setColor(0x66b3ff);
+
+      } else if(message.content.startsWith(prefix + "join")){
+      if(!message.member.voice.channel) return message.channel.send('No estás en un canal de voz')
+      var VC = message.member.voice.channel;
+      
+      VC.join();
+      message.channel.send('Ya estoy únido')
       }
-});
+message.channel.send(embed);
+      });
 //comandos admins
 //comandos solo por id
 client.on('message', message => {
