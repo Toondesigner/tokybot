@@ -89,4 +89,4 @@ client.on('message', message => {
             const args = cont.join(' ');
             let canalvoz = message.member.voice.channel;
 });
-client.login(process.env.TOKEN);
+client.login("OTUyMDA1Mzg2NDUyNDkyMjk5.YivuGw.xc1y7wD0cUiEjTjXFvs4MCEctSY");
