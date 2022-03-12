@@ -42,7 +42,7 @@ activity: {
 
     .addField('help', 'Sirve para ver los comandos disponibles', true)
     .addField('say', 'Sirve para que yo diga lo que tu quieras', true)
-    .addField('invite', 'Comando inutil si no eres 인도 마호가니#5335', true)
+    .addField('invite', 'para usarlo necesitas el permiso de 星のトゥーン#4431', true)
     .addField('avatar', 'Es para ver la foto de perfil de alguien', true)
     .addField('server', 'Es para ver info sobre el server', true)
 
