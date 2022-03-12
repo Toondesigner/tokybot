@@ -1,5 +1,5 @@
 {
- "token":"OTAyMjkyNzM4NDkyNDg5Nzc4.YXcTmA.XZcDY-NVxljRnk8VEHdGnMPI41U",
+ "token":"OTUyMDA1Mzg2NDUyNDkyMjk5.YivuGw.x79f4FV2LbyNzw0bJb0AXxHMWos",
  "prefix":"t."
 
 }
